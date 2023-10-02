@@ -31,9 +31,6 @@ def calc_f1(model, ds, agg='video', verbose=0):
         video2labels[c].append(l)
         video2preds[c].append(p)
 
-  ##################
-  # Summarize
-  ##################
   # anyway calculate frame-level metrics
   all_labels = np.asarray(all_labels)
   all_preds = np.asarray(all_preds)
