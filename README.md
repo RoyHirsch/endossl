@@ -67,7 +67,7 @@ Please cite:
 ```
 
 ## License
-Our work is licensed under MIT licensed, as found in the [LICENSE](LICENSE) file.
+Our work is licensed under BSD 3-Clause license, as found in the [LICENSE](LICENSE) file.
 
 
 
