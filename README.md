@@ -6,16 +6,16 @@ Code and models for MICCAI23 paper: "Self-Supervised Learning for Endoscopy Vide
 ## Background
 Self-supervised learning (SSL) has led to important breakthroughs in computer vision by allowing learning from large amounts of unlabeled data. As such, it might have a pivotal role to play in biomedicine where annotating data requires a highly specialized expertise.
 
-In this work, we study the use of a leading SSL framework, namely Masked Siamese Networks (MSNs), for endoscopic video analysis such as colonoscopy and laparoscopy. To fully exploit the power of SSL, we create sizable endoscopic video datasets. Our extensive experiments show that MSNs training on this data leads to state-of-the-art performance in public standard endoscopic benchmarks such as surgical phase recognition during laparoscopy and in colonoscopic polyp characterization. 
+In this work, we study the use of a leading SSL framework, Masked Siamese Networks (MSNs), for endoscopic video analysis such as colonoscopy and laparoscopy. To fully exploit the power of SSL, we create sizable endoscopic video datasets. Our extensive experiments show that MSN training on this data leads to state-of-the-art performance in public standard endoscopic benchmarks such as surgical phase recognition during laparoscopy and in colonoscopic polyp characterization. 
 
-Furthermore, we show that 50% the annotated data are sufficient to match the performance when training on the entire labeled datasets. Our work provides evidence that SSL can dramatically reduce the need of annotated data in endoscopy
+Furthermore, we show that 50% the annotated data are sufficient to match the performance when training on the entire labeled datasets. Our work provides evidence that SSL can dramatically reduce the need of annotated data in endoscopy.
 
 
 ![alt text](model.png)
 
 
 ## Pre-trained models
-We release a series of models pre-trained with our method over a large corpus of Laparoscopic videos:
+We release a series of models pre-trained with our method over a large corpus of endoscopic videos:
 
 
 | Arch | Dataset | Down-stream results | Link |
@@ -39,7 +39,7 @@ conda create --name <env_name> --file ./requirements.txt
 ### Data
 We publish the data modules for Cholec80 experiments, which can be easily adopted to the rest of the paper. Our data pipeline is heavily adopted from [TF-Cholec80](https://github.com/CAMMA-public/TF-Cholec80/tree/master). 
 
-Run ```prepare.py``` for downloading and extracting Cholec80 dataset:
+Run ```prepare.py``` for downloading and extracting the public Cholec80 dataset:
 
 ```
 python prepare.py --data_rootdir YOUR_LOCATION
@@ -56,7 +56,13 @@ The ```./data/cholec80_images.py``` module contains classes for loading the pre-
 ## Citation
 Please cite:
 ```
-@InProceedings{
+@misc{hirsch2023selfsupervised,
+      title={Self-Supervised Learning for Endoscopic Video Analysis}, 
+      author={Roy Hirsch and Mathilde Caron and Regev Cohen and Amir Livne and Ron Shapiro and Tomer Golany and Roman Goldenberg and Daniel Freedman and Ehud Rivlin},
+      year={2023},
+      eprint={2308.12394},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
 
