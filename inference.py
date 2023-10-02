@@ -27,13 +27,13 @@ parser = argparse.ArgumentParser()
 parser.add_argument(
     "--model_path",
     type=str,
-    default='/home/royhirsch/research-il-lapmsn/checkpoints/vits_lapro_private/saved_model_inference',
+    default='/root/vits_lapro_private/saved_model_inference',
     help="Path to a pre-trained model",
 )
 parser.add_argument(
     "--image_path",
     type=str,
-    default='/home/royhirsch/research-il-lapmsn/cholec80/samples/video01_000001.png',
+    default='/root/cholec80/samples/video01_000001.png',
     help="Path to a image file",
 )
 
